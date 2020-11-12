@@ -21,9 +21,9 @@ env:
 jobs:
   tests:
     runs-on: ubuntu-latest
+    uses: actions/checkout@v2
     steps:
       - name: Test
-        uses: actions/checkout@v2
         env:
           TEST_SUITE: 2.3
           OPENCART: 2.3.0.0
