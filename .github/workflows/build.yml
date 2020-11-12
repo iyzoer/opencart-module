@@ -1,6 +1,8 @@
 name: Opencart module build
 on:
   push:
+    branches:
+      - '*.*'
     tags-ignore:
       - '*.*'
 
