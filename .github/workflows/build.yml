@@ -23,6 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test
+        uses: actions/checkout@v2
         env:
           TEST_SUITE: 2.3
           OPENCART: 2.3.0.0
