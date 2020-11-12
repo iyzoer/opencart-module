@@ -27,7 +27,7 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
-          MYSQL_DATABASE: ${{ OC_DB_DATABASE }}
+          MYSQL_DATABASE: $OC_DB_DATABASE
         ports:
           - 3306
     steps:
