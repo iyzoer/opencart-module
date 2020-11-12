@@ -21,13 +21,13 @@ env:
 jobs:
   tests:
     runs-on: ubuntu-latest
-    with:
-      php-version: '7.0'
     steps:
       - name: Test
         env:
           TEST_SUITE: 2.3
           OPENCART: 2.3.0.0
+        with:
+          php-version: '7.0'
         run: |
           make before_script |
           composer test
