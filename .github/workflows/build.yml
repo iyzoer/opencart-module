@@ -35,10 +35,10 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '7.0'
-        env:
-          TEST_SUITE: 2.3
-          OPENCART: 2.3.0.0
       - name: Chekout
         uses: actions/checkout@v2
       - name: Tests
+        env:
+          TEST_SUITE: 2.3
+          OPENCART: 2.3.0.0
         run: make before_script && composer test
