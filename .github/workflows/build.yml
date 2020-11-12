@@ -32,9 +32,10 @@ jobs:
           - 3306
     steps:
       - name: Set up php
-        uses: shivammathur/setup-php@v2
+        uses: php-actions/composer@v4
         with:
           php-version: '7.0'
+          composer_version: 1
       - name: Chekout
         uses: actions/checkout@v2
       - name: Tests
