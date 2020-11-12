@@ -34,7 +34,7 @@ jobs:
       - name: Set up php
         uses: php-actions/composer@v4
         with:
-          php-version: '7.0'
+          php_version: '7.0'
           composer_version: 1
       - name: Chekout
         uses: actions/checkout@v2
