@@ -1,0 +1,31 @@
+name: Opencart module build
+on:
+  push:
+    tags-ignore:
+      - '*.*'
+
+env:
+  OC_DB_HOSTNAME: localhost
+  OC_DB_USERNAME: root
+  OC_DB_PASSWORD: root
+  OC_DB_DATABASE: tests_opencart
+  OC_DB_DRIVER: mysqli
+  OC_USERNAME: admin
+  OC_PASSWORD: admin
+  OC_EMAIL: test@test.com
+  SERVER_PORT: 80
+  SERVER_URL: http://localhost
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    with:
+      php-version: '7.0'
+    steps:
+      - name: Test
+        env:
+          TEST_SUITE: 2.3
+          OPENCART: 2.3.0.0
+        run: |
+          make before_script |
+          composer test
